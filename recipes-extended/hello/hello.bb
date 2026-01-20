@@ -15,4 +15,5 @@ do_install(){
     install -m 0755 hello ${D}${bindir} //0755 - 0 is for special byte, 7(owner's) = 4+2+1(write+read+execute)
 }                                       //5 - group and 5 is for others. 5 = 4+1(read+execute)
                                         //if u use 0644 u will get error since u wont be able to execute
+RPROVIDES:${PN} += "hello-app"
 
